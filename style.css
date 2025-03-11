@@ -1,0 +1,277 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(31, 29, 29);
+    font-family: monospace;
+    color: lightgray;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border: 0.5px solid rgba(110, 101, 114, 0.5);
+    z-index: 999;
+}
+.head-left{
+    display: flex;
+    align-items: center;
+}
+.head-left img{
+    height: 45px;
+    margin-right: 15px;
+}
+header ul{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+header ul li{
+    list-style: none;
+}
+header a{
+    text-decoration: none;
+    color: gray;
+    font-size: 15px;
+    font-weight: 900;
+    transition: 0.3s;
+}
+header a:hover{
+    color: lightgray;
+    text-shadow: 0 0 15px rgba(63, 61, 61, 0.527);
+}
+.head-right{
+    display: flex;
+    align-items: center;
+}
+.button-box{
+    position: relative;
+    width: 100px;
+    height: 45px;
+    margin-left: 25px;
+    background: linear-gradient(to right, #00aaa7, #7f42a7, #6600c5, #1f2b9c, #2a46ff, #0099ff, #00aaa7);
+    border-radius: 10px;
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+}
+@keyframes animationGradient{
+    to{
+        background-position: 200%;
+    }
+}
+.head-right button{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    border: none;
+    background-color: rgb(14 12 21);
+    color: lightgray;
+    border-radius: 10px;
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.head-right button:hover{
+    color: #969398;
+}
+
+/* Hero Section */
+.hero{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 150vh;
+    overflow: hidden;
+}
+.hero-blur-image{
+    position: absolute;
+    width: 100%;
+    top: -15%;
+}
+.hero-rings-image{
+    position: absolute;
+    height: 90%;
+    top: 90px;
+    opacity: 0.4;
+}
+.hero-icons-image{
+    width: 100%;
+    position: absolute;
+    top: 8%;
+}
+.hero h1{
+    position: absolute;
+    top: 9%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 45px;
+    max-width: 1000px;
+    text-align: center;
+    color: white;
+}
+.hero h3{
+    position: absolute;
+    top: 22%;
+    font-size: 20px;
+    max-width: 700px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #969398;
+}
+.hero button{
+    position: absolute;
+    top: 30%;
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 140px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.4s;
+    font-size: 16px;
+}
+.hero button:hover{
+    opacity: 0.7;
+    color: #6600c5;
+}
+.hero-image-box{
+    margin-top: 250px;
+    position: relative;
+    width: 1000px;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: linear-gradient(to right, #00aaa7, #7f42a7, #6600c5, #1f2b9c, #2a46ff, #0099ff, #00aaa7);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+}
+.hero-image-box .robot-box{
+    width: 99%;
+    height: 98%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50px;
+}
+.hero-image-box .robot-box img{
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: hard-light;
+}
+.hero-image-box .robot-box .robot-header{
+    height: 30px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+/* ---------------Alternative----------------- */
+.hero-image-box .element1{
+    position: absolute;
+    top: 25%;
+    right: -15%;
+    backdrop-filter: blur(10px);
+    width: 25%;
+    border-radius: 15px;
+}
+.hero-image-box .element1 img{
+    width: 100%;
+    border-radius: 15px;
+    /* box-shadow: 0 0 15px rgb(46, 46, 46); */
+}
+.hero-image-box .element2{
+    position: absolute;
+    top: 45%;
+    left: -15%;
+    backdrop-filter: blur(10px);
+    width: 25%;
+    border-radius: 15px;
+}
+.hero-image-box .element2 img{
+    width: 100%;
+    border-radius: 15px;
+    /* box-shadow: 0 0 15px rgb(46, 46, 46); */
+}
+/* ------------------------------------------------ */
+.parallax{
+    transition: transform 1s linear;
+}
+
+/* -------------Sign in----------------- */
+.signin-page-box{
+    position: absolute;
+    top: 30%;
+    width: 30%;
+    height: 60vh;
+}
+.signin-page{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2d193e;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.484);
+    border-radius: 20px;
+}
+.signin-page h1{
+    font-size: 30px;
+    font-weight: 800;
+}
+.signin-page input{
+    padding: 7.5px 30px;
+    background-color: white;
+    width: 50%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 4%;
+}
+.signin-page button{
+    width: 20%;
+    height: 40px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: #422158;
+    cursor: pointer;
+}
+.signin-page button:hover{
+    opacity: 0.7;
+    color: #979797;
+}
+.signin-page p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+    color: rgb(158, 155, 155);
+}
+.signin-page p span{
+    color: #0099ff;
+    cursor: pointer;
+}
